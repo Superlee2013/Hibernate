@@ -38,6 +38,16 @@ public class StudentsTest {
         session.save(students);
     }
 
+    @Test
+    public void testSaveByAuto(){
+        Students students=new Students();
+        students.setSname("李四");
+        students.setAddress("梅三");
+        students.setBirthday(new Date());
+        students.setGender("女");
+        session.save(students);
+    }
+
     @After
     public void destory(){
         transaction.commit();
