@@ -11,11 +11,13 @@
       <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
       <property name="show_sql">true</property>
       <property name="format_sql">true</property>
-      <property name="hbm2ddl.auto">update</property>
+      <property name="hbm2ddl.auto">create</property>
 
       <property name="hibernate.current_session_context_class">thread</property>
 
       <mapping resource="domain/Students.hbm.xml"/>
+
+      <mapping class="domain.Teacher"/>
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
   </session-factory>
